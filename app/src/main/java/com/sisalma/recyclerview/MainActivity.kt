@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         val gson = Gson()
         val listProvince = object : TypeToken<List<provinceValue>>(){}.type
         var provinsi: List<provinceValue> = gson.fromJson(jsonString, listProvince)
-        Log.e("gson parser",provinsi[2].name)
 
         val adapter = dataAdapter(provinsi)
 
